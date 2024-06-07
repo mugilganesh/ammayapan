@@ -3,8 +3,9 @@
 .logofp{
     justify-content: center; 
     align-items: center; 
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 40%;
+    position: fixed;
 }
 
 .splash {
@@ -36,21 +37,19 @@
 .fade-in1{
     font-weight: 700;
     font-size: 40px;
-    padding-left: 4rem;
     color: black;   
     text-align: center;
     justify-content: center;
-    padding-top: 13rem;
+    padding-top: 10rem;
 }
 
 .fade-in2{
     font-weight: 300;
     font-size: 40px;
-    padding-left: 4rem;
     color: black;   
     text-align: center;
     justify-content: center;
-    line-height: 5rem;
+    line-height: 20rem;
 }
 
 .splash.display-none{
