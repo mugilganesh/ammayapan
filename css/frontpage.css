@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root{
+    --teal: #177285;
+    --green: #D0E77A;
+    --turquoise: #4FB4C8;
+    --azure: #F5FEFF;
+    --red: #FB6F70;
+}
 
 @font-face {
     font-family: 'CabinetGrotesk-Medium';
@@ -17,7 +26,7 @@
 .splash {
     height: 100vh;
     overflow-x: hidden;
-    background-color: #ffffff;
+    background-color: var(--azure);
 }
 
 .splash_elements {
@@ -69,7 +78,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #FFFDF4;
+    background-color: var(--azure);
     background-size: cover;
     background-position: center;
     opacity: 0.6;
