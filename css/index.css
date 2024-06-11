@@ -191,17 +191,40 @@
 }
 
 .home_footer_cont{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    width: 89%;
+    max-width: 1720px;   
+    padding: 4rem;
+    border-radius: 3rem;
+    margin: 4.5rem auto;
+    align-items: center;
+}
 
+.loading_circle{
+    width: 28rem; 
+    height: 28rem; 
+    border: 1px solid var(--teal); 
+    border-radius: 50%; 
 }
 
 .home_footer_cont_right{
-    border: var(--teal);
-    border-radius: 50%;
+    font-family: "Poppins";
+    align-self: center;
+    height: 28rem;
+    width: auto;
 }
 
-.home_footer_cont_left_heading{
-    font-family: "Baskerville";
-    font-weight: 100;
-    font-size: 4rem;
-    color: var(--turquoise);
+.home_footer_cont_right_heading{
+    color: var(--teal);
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: 6rem;
+    font-family: "Poppins";
+}
+
+.home_cont_right_para{
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
