@@ -7,6 +7,7 @@
     --turquoise: #4FB4C8;
     --azure: #F5FEFF;
     --red: #FB6F70;
+    --water: #CEF5F9;
 }
 
 * {
@@ -144,7 +145,63 @@
     width: 50%;
     font-weight: 2000;
     font-style: normal;
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding-bottom: 1rem;
     padding-top: 1.5rem;
+}
+
+.home_body_cont{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    width: 89%;
+    max-width: 1720px;   
+    padding: 4rem;
+    border-radius: 3rem;
+    background-color: var(--water); 
+    margin: 0 auto;
+}
+
+.home_body_para_left{
+    font-family: "Baskerville";
+    font-weight: 100;
+    font-size: 90px;
+    color: var(--teal);
+    background-color: var(--water); 
+} 
+
+.home_body_para_right_cont{
+    display: grid;
+    grid-template-rows: 2fr 0.2fr;
+    font-size: 1.2rem;
+    background-color: var(--water);
+    margin: 17px 0px 18px 0px;
+}
+
+.home_body_para_right{
+    width: 100%;
+    padding-right: 130px;
+    background-color: var(--water);
+    font-family: "Poppins";
+}
+
+
+.home_body_founder{
+    background-color: var(--water);
+    font-family: "Poppins";
+}
+
+.home_footer_cont{
+
+}
+
+.home_footer_cont_right{
+    border: var(--teal);
+    border-radius: 50%;
+}
+
+.home_footer_cont_left_heading{
+    font-family: "Baskerville";
+    font-weight: 100;
+    font-size: 4rem;
+    color: var(--turquoise);
 }
