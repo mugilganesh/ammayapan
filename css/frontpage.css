@@ -23,6 +23,11 @@
     margin: 0;
 }
 
+.hide{
+    transition: 2s ease-in-out;
+    display: none;
+}
+
 .splash {
     height: 100vh;
     overflow-x: hidden;
@@ -43,6 +48,30 @@
 .splash_logo {
     transform: scale(0.90);
     padding: 25px 5px;
+}
+
+#svg{
+    stroke: var(--teal);
+    fill-opacity: 0.1;
+    stroke-dasharray: 493;
+    stroke-width: 2.5px;
+    animation: draw 2s ease-in-out 0s 1 forwards;
+
+}
+
+@keyframes draw{
+    0%{
+        stroke-dashoffset: 493;
+        fill-opacity: 0.1;
+    }
+    70%{
+        stroke-dashoffset: 0;
+        fill-opacity: 0.3;
+    }
+    100%{
+        fill-opacity: 1;
+        stroke-width: 0px;
+    }
 }
 
 .splash_title {
