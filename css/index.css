@@ -386,6 +386,7 @@ section .progress_box{
     min-width: 50%;
     height: 100vh;
     align-content: center;
+    /* background-color: blue; */
 }
 
 section .progress_box .progress_bar{
@@ -393,19 +394,88 @@ section .progress_box .progress_bar{
     width: 600px;
     max-width: 1700px;
     transform: rotate(270deg);
+    align-items: center;
+    align-content: center;
+    /* background-color: red; */
 }
 
 section .progress_box .progress_bar circle{
     fill: white;
-    transform: translate(10px, 10px);
+    transform: translate(28px, 10px);
     filter: drop-shadow(4px 4px 10px #0000002a);
 }
 
 section .progress_box .progress_bar circle:nth-child(2){
     stroke: var(--teal);
-    stroke-width: 5;
+    stroke-width: 4;
     stroke-dasharray: 1696;
-    stroke-dashoffset: calc(1696 - (1696 * var(--num)) / 100);
+}
+section .progress_box .progress_bar circle:nth-child(3){
+    fill: var(--teal);
+    stroke-width: 4;
+    stroke-dasharray: 1696;
+}
+
+.dot{
+    height: 550px;
+    width: 550px;
+    position: absolute;
+    inset: 5px;
+    align-self: center;
+    z-index: 20;
+}
+
+.dot::before{
+    content: '';
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: var(--teal);
+    top: -5px;
+    left: 265px;
+    border-radius: 50%;
+}
+
+.slider_container{
+    /* background-color: blue; */
+    position: sticky;
+    top: 0;
+    align-content: center;
+    /* z-index: -1; */
+    min-width: 50%;
+    height: 100vh;
+    margin-top: -742px;
+    opacity: 0.3;
+}
+
+.slider_rotater{
+    height: 570px;
+    width: 570px;
+    background-color: yellow;
+}
+
+.slider{
+    fill: var(--teal);
+    stroke-dasharray: 1696;
+    background: var(--teal);
+    height: 25px;
+    width: 25px;
+    align-content: center;
+    transform: translate(274px, 3px);
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.core_icon_container{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    transform: translate(185px, 210px);
+    z-index: 10;
+}
+
+.core_icon{
+    filter: drop-shadow(4px 4px 10px #0000002a);
 }
 
 .prgress_content{
@@ -486,7 +556,7 @@ footer{
 .logo{
     width: 60px;
     height: 22px;
-    margin: 0 0 8px 35px;
+    margin: 0 0 8px 28px;
 }
 
 .logo_name{

@@ -2,74 +2,88 @@ window.onload = function () {
     document.body.classList.add("remove-scrolling");
 }
 
-setTimeout(()=>{
+setTimeout(() => {
     $('.splash').fadeOut('fast');
-    document.body.classList.remove("remove-scrolling"); 
+    document.body.classList.remove("remove-scrolling");
 }, 1500);
 
+function clampAndScale(value, originalMin, originalMax, targetMin, targetMax) {
+    // Ensure the value is within the original range
+    if (value < originalMin) value = originalMin;
+    if (value > originalMax) value = originalMax;
 
+    // Scale the value from the original range to the target range
+    const scaledValue = (value - originalMin) / (originalMax - originalMin) * (targetMax - targetMin) + targetMin;
+    
+    return scaledValue;
+}
 
-// window.onload = function () {
-//     const container = document.querySelector('.container');
-//     const svg = document.querySelector('svg');
-//     const progressBar = document.querySelector('.progress-bar');
-//     const totalLength = progressBar.getTotalLength();
+var compassion_img_src = "resources/icons/Compassion.svg";
+var inclusivity_img_src = "resources/icons/Inclusivity.svg";
+var respect_img_src = "resources/icons/Respect.svg";
+var intergrity_img_src = "resources/icons/Integrity.svg";
 
-//     setTopValue(svg);
+window.onload = function () {
+    var screen_height = window.screen.height
+    var page_height = document.body.offsetHeight
+    const progressBar = document.querySelector('section .progress_bar');
+    const footer = document.querySelector('footer');
+    const progressSlider = document.getElementById("dot")
 
-//     progressBar.style.strokeDasharray = 1406;
-//     progressBar.style.strokeDashoffset = 1406;
+    window.onresize = function(){
+        screen_height = window.screen.height
+        page_height = document.body.offsetHeight
 
-//     const intersectionCallback = (entries) => {
-//         for (const entry of entries) { // Loop over all elements that either enter or exit the view.
-//             if (entry.isIntersecting) { // This is true when the element is in view.
-//                 window.addEventListener('scroll', () => {
-//                     const curr_scroll_position = getWindowScrollPosition().y
-//                     setProgress(container, progressBar, totalLength, curr_scroll_position);
-//                 });
-//             }
-//         }
-//     }
+        var progress_value = (1696 - progressBar.style.strokeDashoffset)
+        var slider_value = clampAndScale(progress_value, 0, 1696, 0, 360)
+        progressSlider.style.transform = `rotate(${slider_value}deg)`
+    }
+    
+    document.documentElement.scrollHeight - document.documentElement.clientHeight;
 
-//     const observer = new IntersectionObserver(intersectionCallback);
+    window.addEventListener('scroll', () => {
+        const scrollTop =
+            document.body.scrollTop || document.documentElement.scrollTop;
+        var progress_bar_offset = progressBar.getBoundingClientRect();
 
-//     const items = document.querySelectorAll('svg');
-//     for (const item of items) {
-//         observer.observe(item);
-//     }
+        if (((screen_height/2) - screen_height*0.01) > progress_bar_offset.top)
+        {
+            var progress_value = 1696 - (clampAndScale(scrollTop, screen_height*1.05, page_height - (footer.offsetHeight + screen_height), 0, 1696))
+            progressBar.style.strokeDashoffset = `${progress_value}`;
+        }
 
-//     window.addEventListener('resize', () => {
-//         setTopValue(svg);
-//     });
-// }
+        // console.log(((screen_height/2) - screen_height*0.5), progress_bar_offset.top, screen_height)
+    });
+}
 
-// function setTopValue(svg) {
-//     svg.style.top = document.documentElement.clientHeight * 0.5 - (svg.getBoundingClientRect().height * 0.5) + 'px';
-// }
+$(window).scroll(function() {
+    var windowpos = $(window).scrollTop();
+    const progressBar = document.querySelector('section .progress_bar');
+    const progressSlider = document.getElementById("dot")
 
+    console.log(progressBar.style.strokeDashoffset)
+    
+    var progress_value = (1696 - progressBar.style.strokeDashoffset)
+    var slider_value = clampAndScale(progress_value, 0, 1696, 0, 360)
+    progressSlider.style.transform = `rotate(${slider_value}deg)`
 
-// function setProgress(container, progressBar, totalLength, curr_scroll_position) {
-//     const clientHeight = document.documentElement.clientHeight;
-//     const scrollHeight = document.documentElement.scrollHeight;
-//     const scrollTop = document.documentElement.scrollTop;
+    if (progress_value < 424 && progress_value > 0)
+    {
+        $(".core_icon").attr("src", compassion_img_src);
+    }
 
-//     const percentage = scrollTop / (scrollHeight - clientHeight);
-//     if (percentage === 1) {
-//         container.classList.add('completed');
-//     } else {
-//         container.classList.remove('completed');
-//     }
-//     console.log(normalize(totalLength-curr_scroll_position, getWindowScrollPosition().y, totalLength))
-//     if(getWindowScrollPosition().y)
-//     progressBar.style.strokeDashoffset = 1406 + ((normalize(totalLength-curr_scroll_position, getWindowScrollPosition().y, totalLength) * 100) - 200);
-// }
+    if (progress_value < 424*2 && progress_value > 424)
+    {
+        $(".core_icon").attr("src", inclusivity_img_src);
+    }
 
-// const getWindowScrollPosition = () => ({
-//     x: window.scrollX,
-//     y: window.scrollY
-// });
+    if (progress_value < 424*3 && progress_value > 424*2)
+    {
+        $(".core_icon").attr("src", respect_img_src);
+    }
 
-// function normalize(value, min, max) {
-//     return (value - min) / (max - min);
-// }
-
+    if (progress_value < 424*4 && progress_value > 424*3)
+    {
+        $(".core_icon").attr("src", intergrity_img_src);
+    }
+});
