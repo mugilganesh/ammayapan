@@ -382,7 +382,7 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 90%;
+    width: 91dvw;
     height: 100dvh;
     margin: auto;
     background-color: var(--water);
@@ -395,19 +395,31 @@
 
 .slide_members_container{
     max-width: 1720px;
-    background-color: gray;
+    /* background-color: gray; */
     padding: 40px;
     overflow: hidden;
 }
 
 .slide_members_content{
     overflow: hidden;
-    background-color: var(--red);
+    /* background-color: var(--red); */
 }
 
 .card{
+    position: relative;
     padding: 10px;  
     align-content: center;
+}
+
+.card:hover > .flip_container{
+    cursor: pointer;
+    /* margin: 0 -15px 0 0; */
+    transform: rotateY(180deg);
+}
+
+.flip_container{
+    transition: transform 2s;
+    transform-style: preserve-3d;
 }
 
 .image_content, .card_content{
@@ -415,9 +427,25 @@
     flex-direction: column;
 }
 
-.image_content{
+.image_content, .description_content{
     height: 500px;
-    width: 390px;
+    width: 385px;
+    backface-visibility: hidden;
+}
+
+.image_content{
+    position: absolute;
+}
+
+.description_content{
+    background-color: var(--teal);
+    border-radius: 1rem;
+    transform: rotateY(180deg);
+    padding: 50px;
+    font-size: 18px;
+    font-family: "Poppins";
+    font-weight: 300;
+    color: var(--azure);
 }
 
 .card_content{
