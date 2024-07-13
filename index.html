@@ -83,29 +83,45 @@
       </div>
 
       <section>
-        <div class="progress_box" style="--num:50;">
-          <svg class="progress_bar">
-            <circle cx="270px" cy="270px" r="270px"></circle>
-            <circle cx="270px" cy="270px" r="270px"></circle>
-          </svg>
+        <div class="progress_container">
+          <div class="progress_box" style="--num:50;">
+            <div class="core_icon_container">
+              <img class="core_icon" src="/resources/icons/Integrity.svg" alt="">
+            </div>
+            <div class="dot" id="dot"></div>
+            <svg class="progress_bar" id="progress_bar">
+              <circle cx="270px" cy="270px" r="270px"></circle>
+              <circle cx="270px" cy="270px" r="270px"></circle>
+              <!-- <circle cx="12px" cy="12px" r="12px"></circle> -->
+            </svg>
+          </div>
+          <!-- <div class="slider_container">
+            <div class="slider_rotater" id="slider_container">
+              <div class="slider"></div>
+            </div>
+          </div> -->
         </div>
         <div class="progess_content">
           <ul>
-            <li class="core_value">
+            <li class="core_value" id="compassion">
               <h1 class="home_footer_cont_right_heading">Compassion and Empathy</h1>
-              <p class="home_cont_right_para">Prioritizing the needs and well-being of beneficiaries, treating all individuals with kindness, and being sensitive to their circumstances and challenges.</p>
+              <p class="home_cont_right_para">Prioritizing the needs and well-being of beneficiaries, treating all
+                individuals with kindness, and being sensitive to their circumstances and challenges.</p>
             </li>
-            <li class="core_value">
+            <li class="core_value" id="inclusivity">
               <h1 class="home_footer_cont_right_heading">Inclusivity and Equity</h1>
-              <p class="home_cont_right_para">Developing programs that are accessible to diverse groups, promoting non-discriminatory practices, and striving to eliminate barriers to participation.</p>
+              <p class="home_cont_right_para">Developing programs that are accessible to diverse groups, promoting
+                non-discriminatory practices, and striving to eliminate barriers to participation.</p>
             </li>
-            <li class="core_value">
+            <li class="core_value" id="respect">
               <h1 class="home_footer_cont_right_heading">Respect and Dignity</h1>
-              <p class="home_cont_right_para">Treating everyone with respect, safeguarding the dignity of all beneficiaries and stakeholders, and fostering a culture of mutual respect within the organization.</p>
+              <p class="home_cont_right_para">Treating everyone with respect, safeguarding the dignity of all
+                beneficiaries and stakeholders, and fostering a culture of mutual respect within the organization.</p>
             </li>
-            <li class="core_value">
+            <li class="core_value" id="intergrity">
               <h1 class="home_footer_cont_right_heading">Integrity and Transparency</h1>
-              <p class="home_cont_right_para">Clear communication of goals, activities, and financial matters to stakeholders and the public, ensuring that all actions are ethical and accountable.</p>
+              <p class="home_cont_right_para">Clear communication of goals, activities, and financial matters to
+                stakeholders and the public, ensuring that all actions are ethical and accountable.</p>
             </li>
           </ul>
         </div>
