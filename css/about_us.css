@@ -377,70 +377,74 @@
     margin-top: 6rem;
 }
 
-.content_section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    width: 87%;
-    max-width: 1720px;
-    margin: 1rem auto;
+.members_container{
+    display: flex;
     align-items: center;
-    gap: 2rem;
+    justify-content: center;
+    overflow: hidden;
+    width: 90%;
+    height: 100dvh;
+    margin: auto;
+    background-color: var(--water);
+    padding: 20px 0;
 }
 
-.content_section_founder {
-    border: 1.8px solid black;
-    border-radius: 1rem;
+.swiper-wrapper{
+    align-items: center;
+}
+
+.slide_members_container{
+    max-width: 1720px;
+    background-color: gray;
+    padding: 40px;
     overflow: hidden;
 }
 
-.content_section_founder_details {
+.slide_members_content{
+    overflow: hidden;
+    background-color: var(--red);
+}
+
+.card{
+    padding: 10px;  
+    align-content: center;
+}
+
+.image_content, .card_content{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
-.founder_img {
-    width: 260px;
-    height: 320px;
+.image_content{
+    height: 500px;
+    width: 390px;
 }
 
-.founders_content {
-    font-family: "Poppins";
-    font-size: 17px;
-    font-weight: 400;
-    padding: 2rem 2em;
-    background-color: transparent;
+.card_content{
+    align-items: start;
 }
 
-.founder_details_section {
-    font-family: "Poppins", sans-serif;
-    background-color: var(--teal);
-    padding: 1rem 2rem;
-    color: var(--azure);
+.card_image{
+    height: 500px;
+    width: 385px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.name{
+    font-size: 28px;   
+    font-family: "Baskervville";
     font-weight: 100;
+    font-style: normal; 
+    text-align: left;
+    margin-top: 10px;
 }
 
-.founder_name {
-    font-family: "Baskervville", serif;
-    font-weight: 400;
-    font-size: 26px;
-    background-color: transparent;
-}
-
-.founder_position {
-    font-size: 18px;
-    font-family: "Poppins", sans-serif;
-    font-weight: 300;
-    color: var(--azure);
-    background-color: transparent;
-}
-
-.founder_name h2 {
-    font-family: "Baskerville";
-    font-size: 2rem;
-}
-
-.founder_name p {
+.designation{
+    font-size: 16px;
     font-family: "Poppins";
+    font-weight: 500;
+    margin-top: 10px;
 }
 
 footer {
