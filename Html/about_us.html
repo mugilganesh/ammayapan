@@ -9,6 +9,8 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="/js/aboutus.js"></script>
   <link rel="stylesheet" href="/css/swiper-bundle.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 </head>
 
 <body>
@@ -126,83 +128,163 @@
         <p class="body_founder">-Durai, Founder</p>
       </div>
     </div>
-    <div class="members_container">
-      <div class="slide_members_container swiper-container">
-        <div class="slide_members_content">
-          <div class="card_wrapper swiper-wrapper">
-            <div class="card swiper-slide">
-              <div class="flip_container">
-                <div class="image_content">
-                  <div class="card_image">
-                    <img src="/resources/images/Stock Images/Women1.png" alt="Women1" class="card_image">
+    <div class="members_container_background">
+      <div class="members_container">
+        <div class="slide_members_container swiper-container">
+          <div class="slide_members_content">
+            <div class="card_wrapper swiper-wrapper">
+              <div class="card swiper-slide">
+                <div class="flip_container">
+                  <div class="image_content">
+                    <div class="card_image">
+                      <img src="/resources/images/Stock Images/Women1.png" alt="Women1" class="card_image">
+                    </div>
+                  </div>
+                  <div class="description_content">
+                    <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                      compassionate care, meaningful activities, and a community that feels like family.</p>
                   </div>
                 </div>
-                <div class="description_content">
-                  <p>Ammayappan is dedicated to enriching the lives of our residents by offering
-                    compassionate care, meaningful activities, and a community that feels like family.</p>
+                <div class="card_content">
+                  <h2 class="name">Durai Vinayagam</h2>
+                  <p class="designation">Founder</p>
                 </div>
               </div>
-              <div class="card_content">
-                <h2 class="name">Durai Vinayagam</h2>
-                <p class="designation">Founder</p>
+              <div class="card swiper-slide">
+                <div class="flip_container">
+                  <div class="image_content">
+                    <div class="card_image">
+                      <img src="/resources/images/Stock Images/Women2.png" alt="Women1" class="card_image">
+                    </div>
+                  </div>
+                  <div class="description_content">
+                    <p> We strive to meet the
+                      physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+                    </p>
+                  </div>
+                </div>
+                <div class="card_content">
+                  <h2 class="name">Durai Vinayagam</h2>
+                  <p class="designation">Founder</p>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="flip_container">
+                  <div class="image_content">
+                    <div class="card_image">
+                      <img src="/resources/images/Stock Images/Women3.png" alt="Women1" class="card_image">
+                    </div>
+                  </div>
+                  <div class="description_content">
+                    <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                      compassionate care, meaningful activities, and a community that feels like family.</p>
+                  </div>
+                </div>
+                <div class="card_content">
+                  <h2 class="name">Durai Vinayagam</h2>
+                  <p class="designation">Founder</p>
+                </div>
+              </div>
+              <div class="card swiper-slide">
+                <div class="flip_container">
+                  <div class="image_content">
+                    <div class="card_image">
+                      <img src="/resources/images/Stock Images/Women4.png" alt="Women1" class="card_image">
+                    </div>
+                  </div>
+                  <div class="description_content">
+                    <p> We strive to meet the
+                      physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+                    </p>
+                  </div>
+                </div>
+                <div class="card_content">
+                  <h2 class="name">Durai Vinayagam</h2>
+                  <p class="designation">Founder</p>
+                </div>
               </div>
             </div>
-            <div class="card swiper-slide">
-              <div class="flip_container">
-                <div class="image_content">
-                  <div class="card_image">
-                    <img src="/resources/images/Stock Images/Women2.png" alt="Women1" class="card_image">
-                  </div>
-                </div>
-                <div class="description_content">
-                  <p> We strive to meet the
-                    physical, emotional, and social needs of each individual, ensuring their well-being and happiness.</p>
-                </div>
-              </div>
-              <div class="card_content">
-                <h2 class="name">Durai Vinayagam</h2>
-                <p class="designation">Founder</p>
-              </div>
-            </div>
-            <div class="card swiper-slide">
-              <div class="flip_container">
-                <div class="image_content">
-                  <div class="card_image">
-                    <img src="/resources/images/Stock Images/Women3.png" alt="Women1" class="card_image">
-                  </div>
-                </div>
-                <div class="description_content">
-                  <p>Ammayappan is dedicated to enriching the lives of our residents by offering
-                    compassionate care, meaningful activities, and a community that feels like family.</p>
-                </div>
-              </div>
-              <div class="card_content">
-                <h2 class="name">Durai Vinayagam</h2>
-                <p class="designation">Founder</p>
+          </div>
+          <!-- <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
+    </div>
+
+    <div class="testimonial_section">
+      <div class="testimonials_title">
+        <h1>Testimonials</h1>
+      </div>
+      <div class="testimonial_container">
+        <button class="testimonial_button" id="testimonial_left" onclick="navigate_testimonial_left()"><img
+            src="/resources/icons/Left_Arrow.svg" alt="Left Arrow"></button>
+        <div class="testimonials">
+          <div class="testimonial_slides">
+            <div class="testimonial_slide first_slide">
+              <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
+                physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+              </p>
+              <i class="bx bxs-quote-alt-left quote_icon"></i>
+
+              <div class="details">
+                <span class="testimonial_name">Durain Vinayagam,</span>
+                <span class="testimonial_designation">Founder</span>
               </div>
             </div>
-            <div class="card swiper-slide">
-              <div class="flip_container">
-                <div class="image_content">
-                  <div class="card_image">
-                    <img src="/resources/images/Stock Images/Women4.png" alt="Women1" class="card_image">
-                  </div>
-                </div>
-                <div class="description_content">
-                  <p> We strive to meet the
-                    physical, emotional, and social needs of each individual, ensuring their well-being and happiness.</p>
-                </div>
+            <div class="testimonial_slide">
+              <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
+                physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+              </p>
+              <i class="bx bxs-quote-alt-left quote_icon"></i>
+
+              <div class="details">
+                <span class="testimonial_name">Durain Vinayagam,</span>
+                <span class="testimonial_designation">Founder</span>
               </div>
-              <div class="card_content">
-                <h2 class="name">Durai Vinayagam</h2>
-                <p class="designation">Founder</p>
+            </div>
+            <div class="testimonial_slide">
+              <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
+                physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+              </p>
+              <i class="bx bxs-quote-alt-left quote_icon"></i>
+
+              <div class="details">
+                <span class="testimonial_name">Durain Vinayagam,</span>
+                <span class="testimonial_designation">Founder</span>
+              </div>
+            </div>
+            <div class="testimonial_slide">
+              <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
+                physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+              </p>
+              <i class="bx bxs-quote-alt-left quote_icon"></i>
+
+              <div class="details">
+                <span class="testimonial_name">Durain Vinayagam,</span>
+                <span class="testimonial_designation">Founder</span>
+              </div>
+            </div>
+            <div class="testimonial_slide">
+              <p>Ammayappan is dedicated to enriching the lives of our residents by offering
+                compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
+                physical, emotional, and social needs of each individual, ensuring their well-being and happiness.
+              </p>
+              <i class="bx bxs-quote-alt-left quote_icon"></i>
+
+              <div class="details">
+                <span class="testimonial_name">Durain Vinayagam,</span>
+                <span class="testimonial_designation">Founder</span>
               </div>
             </div>
           </div>
         </div>
-        <!-- <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div> -->
+        <button class="testimonial_button" id="testimonial_left" onclick="navigate_testimonial_right()"><img
+            src="/resources/icons/Right Arrow.svg" alt="Right Arrow"></i></i></button>
       </div>
     </div>
     <footer>
