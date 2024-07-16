@@ -199,13 +199,13 @@
     
 }
 
-.gallery{
+.gallery {
     width: 100%;
     padding: 19rem;
     background-color: var(--water);
 }
 
-.gallery h1{
+.gallery h1 {
     text-align: center;
     color: var(--teal);
     font-family: "Baskerville";
@@ -214,16 +214,18 @@
     background-color: var(--water);
 }
 
-.gallery_container{
+.gallery_container {
     align-items: center;
     display: flex;
-    height: 400px;
+    height: 600px;
     max-width: 1720px;
     position: relative;
+    background-color: var(--water);
+    margin-top: 3rem;
 }
 
-.gallery_iteam{
-    height: 200px;
+.gallery_item {
+    height: 600px;
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-out;
@@ -232,4 +234,97 @@
     border-radius: 15px;
     background-size: contain;
 }
+
+.gallery_item-1 {
+    left: 1%;
+    opacity: 0.4;
+    transform: translateX(-50%) scale(0.5);
+}
+
+.gallery_item-2, .gallery_item-4 {
+    height: 350px;
+    opacity: 0.8;
+    width: 400px;
+    z-index: 1;
+    transform: scale(0.8);
+}
+
+.gallery_item-2 {
+    left: 13%;
+    transform: translateX(-50%) scale(0.8);
+}
+
+.gallery_item-3 {
+    box-shadow: -2px 5px 33px 6px rgba(0,0,0,0.35);
+    height: 500px;
+    opacity: 1;
+    width: 700px;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%) scale(1);
+}
+
+.gallery_item-4 {
+    left: 90%;
+    transform: translateX(-50%) scale(0.8);
+}  
+
+.gallery_item-5 {
+    left: 100%;
+    opacity: 0.4;
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_controls {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+    background-color: var(--water);  
+    
+}
+
+.gallery_controls button {
+    background-color: var(--water);
+    border: 0;
+    cursor: pointer;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: var(--teal);
+}
+
+.gallery_container-button:focus {
+    outline: none;
+}
+
+.gallery_controls:hover .gallery_controls-previous::before {
+    left: -40px;
+}
+
+.gallery_controls:hover .gallery_controls-next::before {
+    right: -40px;
+}
+
+.gallery_nav {
+    bottom: -15px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.gallery_nav li {
+    background: #ccc;
+    border-radius: 50%;
+    height: 10px;
+    margin: 0 16px;
+    width: 10px;
+}
+
+.gallery_nav li.gallery_item-selector {
+    background: #555;
+}
+
 
