@@ -1,6 +1,7 @@
 window.onload = function () {
-  document.body.classList.add("remove-scrolling");
-  
+}
+
+window.onload = function () {
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3,
     spaceBetween: 35,
@@ -36,4 +37,25 @@ window.onload = function () {
       },
     },
   });
+}
+
+function on_upcoming_event_clicked(event_num) {
+  var selected_event = document.getElementById(`upcoming_item_${event_num}`)
+  var selected_btn = document.getElementById(`drop_down_${event_num}`)
+
+  items = selected_event.classList["value"].split(" ")
+
+  console.log(selected_event.classList)
+
+  if(items.includes("selected_item"))
+  {
+    selected_event.classList.remove("selected_item")
+    selected_btn.style.transform = 'rotate(0deg)'
+  }
+  else{
+    selected_event.classList.add("selected_item")
+    selected_btn.style.transform = 'rotate(180deg)'
+  }
+
+  console.log(selected_event.classList)
 }

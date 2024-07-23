@@ -11,6 +11,10 @@
     --light_blue: #EDFDFF;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .nav_container {
     width: 100%;
 }
@@ -213,6 +217,90 @@
     transition: 1s ease; 
 }
 
+.upcoming_title h1{
+    font-family: "Baskervville"; 
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100;
+    color: var(--teal);
+}
+
+.upcoming_events{
+    border-radius: 1rem;
+    overflow: hidden;
+    margin: 80px auto;
+    width: 80%;
+    box-shadow: 4px 4px 15px #0000002d;
+    padding: 30px;
+}
+
+.selected_item{
+    background-color: var(--light_blue);
+    max-height: 500px !important;
+    transition: max-height 1s ease-in-out !important;
+}
+
+.upcoming_list{
+    padding: 0;
+}
+
+.upcoming_item{
+    list-style: none;
+    margin: auto;
+    margin: 5px;
+    border-radius: 1rem;
+    overflow: hidden;
+    max-height: 80px;
+    transition: 0.5s ease-in-out;
+}
+
+.upcoming_item_details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 50px 0 50px;
+    /* background-color: blue; */
+}
+
+.upcoming_item_details h2{
+    font-family: "Poppins";  
+    font-weight: 300;  
+    font-size: 16px;
+}
+
+.upcoming_item_details h3{
+    font-family: "Poppins";  
+    font-weight: 300;  
+    font-size: 18px;
+}
+
+.upcoming_item_details img{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+}
+
+.upcoming_item_content p{
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 200;
+    padding: 0 50px 20px 50px;
+    /* background-color: red; */
+}
+
+.drop_down{
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+}
+
+.drop_down img{
+    transition: 0.7s;
+}   
+
 footer {
     width: 100%;
     background-color: var(--teal);
@@ -303,12 +391,12 @@ footer {
     font-family: "Poppins";
 }
 
-ul li {
+.col ul li {
     list-style: none;
     margin-bottom: 12px;
 }
 
-ul li a {
+.col ul li a {
     text-decoration: none;
     color: var(--azure);
     font-family: "Poppins";
