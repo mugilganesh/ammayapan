@@ -500,6 +500,7 @@ section .progress_box .progress_bar circle:nth-child(3){
     transform: translate(274px, 3px);
     border-radius: 50%;
     z-index: 20;
+    stroke-dashoffset: 0;
 }
 
 .core_icon_container{
@@ -517,6 +518,10 @@ section .progress_box .progress_bar circle:nth-child(3){
 .prgress_content{
     display: flex;
     overflow: hidden;
+}
+
+.progess_content ul{
+    list-style: none;
 }
 
 .core_value{
