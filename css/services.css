@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Pontano+Sans:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&display=swap');
 
 
 :root{
@@ -16,7 +15,10 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: var(--azure);
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 .nav_container {
@@ -37,6 +39,7 @@
     transform: scale(0.28);
     justify-self: start;
     cursor: pointer;
+    background-color: transparent;
 }
 
 .nav_menu {
@@ -50,6 +53,7 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
+    font-weight: 200;
 }
 
 .curr_nav_item {
@@ -59,7 +63,7 @@
     margin-top: -7px;
 }
 
-.curr_nav_link{
+.curr_nav_link {
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -68,8 +72,7 @@
     color: var(--teal);
 }
 
-.nav_link{
-    font-family: "Poppins";
+.nav_link {
     text-decoration: none;
     color: black
 }
@@ -87,6 +90,21 @@
     color: black;
     font-size: 18px;
     cursor: pointer;
+}
+
+.special_menu_item{
+    background-color: #C7DDE2;
+    color: var(--teal);
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 2px solid var(--teal);
+    transition: 0.5s;
+}
+
+.special_menu_item:hover{
+    background-color: var(--teal);
+    color: white !important;
 }
 
 .curr_nav_item:hover {
@@ -114,7 +132,7 @@
     margin: auto;
     margin-top: 5rem;
     height: 20rem;
-    font-family: "Baskerville";
+    font-family: "Baskervville";
     box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
     background-color: var(--water);
     border-radius: 2rem;
@@ -186,36 +204,38 @@
 }
 
 .blog_section{
-    margin-top: 5rem;
     text-align: center;
     background-color: var(--teal);
     background: linear-gradient(to bottom, var(--azure) 50%, var(--water) 0%);
+    overflow: hidden;
+    max-width: 1720px;
+    margin:  5rem auto 0 auto;
 }
 
 .blog_text{
-    border: 1px ;
-    border-radius: 1rem;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    width: 87%;
+    border-radius: 8px;
+    width: 80%;
     margin: auto;
     background-color: var(--teal);
-    color: var(--water);
-    font-family: "Baskerville";
-    font-size: 2rem;
-    font-weight: 100;
-    padding: 2rem; 
+    color: white;
+    font-family: "Baskervville";
+    font-size: 32px;
+    font-weight: 200;
+    padding: 25px; 
 }
 
 .gallery {
     width: 100%;
     padding: 100px;
     background-color: var(--water);
+    max-width: 1720px;
+    margin: auto;
 }
 
 .gallery h1 {
     text-align: center;
     color: var(--teal);
-    font-family: "Baskerville";
+    font-family: "Baskervville";
     font-size: 2.5rem;
     font-weight: 100;
     background-color: var(--water);
@@ -225,7 +245,7 @@
     align-items: center;
     display: flex;
     height: 600px;
-    max-width: 1720px;
+    max-width: 1000px;
     position: relative;
     background-color: var(--water);
     margin-top: 3rem;
@@ -293,6 +313,17 @@
     
 }
 
+.gallery_content{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.gallery_control_btn{
+    height: 30px;
+    width: 30px;
+}
+
 .gallery_controls button {
     background-color: var(--water);
     border: 0;
@@ -336,4 +367,188 @@
     background: #555;
 }
 
+footer {
+    width: 100%;
+    background-color: var(--teal);
+    padding: 70px 0 35px 0;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: "Poppins";
+    max-width: 1720px;
+    margin: auto;
+    align-items: center;
+    /* margin-top: 85px; */
+}
 
+.row {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    /* flex-wrap: wrap; */
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.col {
+    padding: 10px;
+}
+
+.col_logo {
+    flex-basis: 50%;
+}
+
+.col_contact {
+    flex-basis: 16%;
+}
+
+.col_links {
+    flex-basis: 16%;
+    margin-left: 25px;
+}
+
+.col_newsletter {
+    flex-basis: 16%;
+}
+
+.logo {
+    width: 60px;
+    height: 22px;
+    margin: 0 0 8px 35px;
+}
+
+.logo_name {
+    font-size: 18px;
+    color: var(--azure);
+    letter-spacing: 2px;
+}
+
+.col h3 {
+    width: fit-content;
+    margin-bottom: 20px;
+    position: relative;
+    font-family: "Poppins";
+    font-weight: 500;
+    color: var(--azure);
+}
+
+.contant_details {
+    font-family: "Poppins";
+    color: var(--azure);
+    font-weight: 200;
+    font-size: 12px;
+}
+
+.sub_title {
+    font-family: "Poppins";
+    color: var(--azure);
+    font-weight: 400;
+    margin: 20px 0 0;
+}
+
+.email_id {
+    width: fit-content;
+    border-bottom: 1px solid #f5feff93;
+    font-family: "Poppins";
+}
+
+.phone {
+    width: fit-content;
+    border-bottom: 1px solid #f5feff93;
+    font-family: "Poppins";
+}
+
+.col ul li {
+    list-style: none;
+    margin-bottom: 12px;
+}
+
+.col ul li a {
+    text-decoration: none;
+    color: var(--azure);
+    font-family: "Poppins";
+    font-weight: 200;
+}
+
+.newsletter_content {
+    font-family: "Poppins";
+    font-weight: 200;
+    color: var(--azure);
+    margin-bottom: 35px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    background-color: var(--azure);
+    padding: 1px;
+    border-radius: 5px;
+}
+
+form input {
+    width: 100%;
+    background: var(--azure);
+    border: 0;
+    outline: none;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+form input::placeholder {
+    color: black;
+    opacity: 0.3;
+    font-family: "Poppins";
+}
+
+form button {
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    background-color: var(--teal);
+    align-self: center;
+    justify-self: center;
+}
+
+.send_icon {
+    transform: scale(0.7);
+    padding: 4px 4px 0 4px;
+}
+
+.footer_bottom {
+    margin-top: 100px;
+}
+
+.extra {
+    width: 92%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1720;
+    margin: auto;
+}
+
+hr {
+    width: 92%;
+    border: 0;
+    border-bottom: 1px solid var(--azure);
+    margin: 20px auto;
+}
+
+.copyright {
+    color: var(--azure);
+    font-weight: 200;
+    flex-basis: 50%;
+}
+
+.social_icons {
+    justify-self: end;
+}
+
+.icon {
+    width: 23px;
+    height: 23px;
+    text-align: center;
+    line-height: 40px;
+    margin-left: 20px;
+}

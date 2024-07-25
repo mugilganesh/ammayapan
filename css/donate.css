@@ -27,6 +27,8 @@
 
 .nav_container {
     width: 100%;
+    /* background-color: var(--teal); */
+    padding-bottom: 10px;
 }
 
 .navbar {
@@ -56,6 +58,7 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
+    font-weight: 200;
 }
 
 .curr_nav_item {
@@ -93,6 +96,21 @@
     color: black;
     font-size: 18px;
     cursor: pointer;
+}
+
+.curr_special_menu_item{
+    background-color: var(--teal);
+    color: white;
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 2px solid var(--teal);
+    transition: 0.5s;
+}
+
+.curr_special_menu_item:hover{
+    background-color: var(--teal);
+    color: white !important;
 }
 
 .curr_nav_item:hover {
@@ -153,10 +171,16 @@
     /* padding: 35px 0 60px 0; */
 }
 
+.hide_content{
+    display: none;
+    opacity: 0;
+    transition: 1s;
+}
+
 .donation_details{
-    background-color: var(--azure);
+    background-color: white;
     width: 70%;
-    height: 275px;
+    /* height: 600px; */
     margin: auto;
     margin-top: -150px;
     max-width: 1000px;
@@ -166,6 +190,8 @@
     padding: 30px;
 
     overflow: hidden;
+
+    transition: all 1s;
 }
 
 .donate_details_1{
@@ -181,10 +207,10 @@
     padding: 30px 0 60px 0;
 }
 
-.donate_details_1_inputs{
+/* .donate_details_1_inputs{
     display: flex;
     justify-content: space-evenly;
-}
+} */
 
 .donate_details_1_inputs button{
     height: 50px;
@@ -201,6 +227,13 @@
     font-weight: 450;
     color: var(--teal);
     transition: 0.5s;
+
+    margin: 15px 50px;
+}
+
+.button_selected{
+    background-color: var(--teal) !important;
+    color: var(--azure) !important;
 }
 
 .donate_details_1_inputs button:hover{
@@ -211,6 +244,8 @@
 .donate_details_2{
     width: 100%;
     text-align: center;
+    opacity: 1;
+    transition: 1s;
 }
 
 .donate_details_2 h2{
@@ -256,6 +291,157 @@
     color: var(--teal);
     font-weight: 200;
     padding: 30px 0 30px 0;
+}
+
+.donate_details_3_inputs{
+    margin: 10px;
+}
+
+.impact_container{
+    display: inline-flex;
+    /* height: 125px; */
+    width: 215px;
+    border-radius: 8px;
+    border: 2px solid var(--teal);
+    justify-content: flex-start;
+    column-gap: 20px;
+    align-items: center;
+    transition: all 0.5s;
+
+    margin: 20px 30px 20px 30px;
+}
+
+.impact_container:hover{
+    cursor: pointer;
+    background-color: rgba(23, 114, 133, 0.24);
+}
+
+.impact_radio_btn{
+    display: flex;
+    height: 125px;
+    padding: 20px 0 0 0;
+    margin: 0 5px 0 30px;
+}
+
+.radio_circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    /* background-color: #D7D7D7; */
+    outline: 1px solid var(--teal);
+    outline-offset: 2.5px;
+    /* transition: all 0.2s; */
+}
+
+.impact_details{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: var(--teal);
+}
+
+.impact_details h3{
+    font-family: "Poppins";
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.impact_details p{
+    font-family: "Baskervville";
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: start;
+}
+
+.impact_selected{
+    background-color: var(--teal) !important;
+}
+
+.impact_details_selected{
+    color: white !important;
+}
+
+.radio_circle_selected{
+    outline: 3px solid white;
+}
+
+.custom_amount{
+    display: flex;
+    justify-content: center;
+    margin: 60px 0;
+}
+
+.custom_currency{
+    height: 50px;
+    width: 11%;
+    background-color: #D9D9D9;
+    border-radius: 4px 0 0 4px;
+    text-align: center;
+    justify-self: center;
+}
+
+.custom_currency p{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: "Poppins";
+    color: var(--teal);
+    font-size: 22px;
+    font-weight: 400;
+    justify-content: center;
+}
+
+.custom_price{
+    height: 50px;
+    width: 71%;
+    background-color: #EAEAEA;
+    border-radius: 0 4px 4px 0;
+}
+
+.custom_price input{
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: var(--teal);
+    font-family: "Poppins";
+    font-size: 24px;
+    padding: 20px;
+    font-weight: 400;
+    
+}
+
+.custom_price input::placeholder{
+    color: #C8C8C8;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.donate_submit button{
+    height: 45px;
+    width: 300px;
+    border-radius: 4px;
+    background-color: var(--teal);
+    border: 2px solid var(--teal);
+    text-align: center;
+    text-decoration: none;
+
+    font-family: "Poppins";
+    font-size: 16px;
+    font-weight: 450;
+    color: white;
+    transition: 0.5s;
+
+    margin: 15px;
+
+    transition: all 1s;
+}
+
+.donate_submit button:hover{
+    cursor: pointer;
+    background-color: rgba(23, 114, 133, 0.24);
+    scale: 1.05;
+    color: var(--teal);
 }
 
 .bank_details{
@@ -341,6 +527,7 @@
 .faq_section{
     width: 100%;
     text-align: center;
+    margin-bottom: 100px;
 }
 
 .faq_title{
@@ -406,10 +593,7 @@
     text-align: start;
 }
 
-
-
-
-footer{
+footer {
     width: 100%;
     background-color: var(--teal);
     padding: 70px 0 35px 0;
@@ -419,51 +603,52 @@ footer{
     max-width: 1720px;
     margin: auto;
     align-items: center;
-    margin-top: 85px;
+    /* margin-top: 85px; */
 }
 
-.row{
+.row {
     width: 85%;
     margin: auto;
     display: flex;
+    /* flex-wrap: wrap; */
     align-items: flex-start;
     justify-content: space-between;
 }
 
-.col{
+.col {
     padding: 10px;
 }
 
-.col_logo{
+.col_logo {
     flex-basis: 50%;
 }
 
-.col_contact{
+.col_contact {
     flex-basis: 16%;
 }
 
-.col_links{
+.col_links {
     flex-basis: 16%;
     margin-left: 25px;
 }
 
-.col_newsletter{
+.col_newsletter {
     flex-basis: 16%;
 }
 
-.logo{
+.logo {
     width: 60px;
     height: 22px;
-    margin: 0 0 8px 28px;
+    margin: 0 0 8px 35px;
 }
 
-.logo_name{
+.logo_name {
     font-size: 18px;
     color: var(--azure);
     letter-spacing: 2px;
 }
 
-.col h3{
+.col h3 {
     width: fit-content;
     margin-bottom: 20px;
     position: relative;
@@ -472,52 +657,52 @@ footer{
     color: var(--azure);
 }
 
-.contant_details{
+.contant_details {
     font-family: "Poppins";
     color: var(--azure);
     font-weight: 200;
     font-size: 12px;
 }
 
-.sub_title{
+.sub_title {
     font-family: "Poppins";
     color: var(--azure);
     font-weight: 400;
     margin: 20px 0 0;
 }
 
-.email_id{
+.email_id {
     width: fit-content;
     border-bottom: 1px solid #f5feff93;
     font-family: "Poppins";
 }
 
-.phone{
+.phone {
     width: fit-content;
     border-bottom: 1px solid #f5feff93;
     font-family: "Poppins";
 }
 
-ul li{
+.col ul li {
     list-style: none;
     margin-bottom: 12px;
 }
 
-ul li a{
+.col ul li a {
     text-decoration: none;
     color: var(--azure);
     font-family: "Poppins";
     font-weight: 200;
 }
 
-.newsletter_content{
+.newsletter_content {
     font-family: "Poppins";
     font-weight: 200;
     color: var(--azure);
     margin-bottom: 35px;
 }
 
-form{
+form {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -527,22 +712,22 @@ form{
     border-radius: 5px;
 }
 
-form input{ 
+form input {
     width: 100%;
     background: var(--azure);
     border: 0;
     outline: none;
     padding: 8px;
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
-form input::placeholder{ 
+form input::placeholder {
     color: black;
     opacity: 0.3;
     font-family: "Poppins";
 }
 
-form button{
+form button {
     border: 0;
     outline: none;
     cursor: pointer;
@@ -552,16 +737,16 @@ form button{
     justify-self: center;
 }
 
-.send_icon{
+.send_icon {
     transform: scale(0.7);
     padding: 4px 4px 0 4px;
 }
 
-.footer_bottom{
+.footer_bottom {
     margin-top: 100px;
 }
 
-.extra{
+.extra {
     width: 92%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -569,24 +754,24 @@ form button{
     margin: auto;
 }
 
-hr{
+hr {
     width: 92%;
     border: 0;
     border-bottom: 1px solid var(--azure);
     margin: 20px auto;
 }
 
-.copyright{
+.copyright {
     color: var(--azure);
     font-weight: 200;
     flex-basis: 50%;
 }
 
-.social_icons{
+.social_icons {
     justify-self: end;
 }
 
-.icon{
+.icon {
     width: 23px;
     height: 23px;
     text-align: center;

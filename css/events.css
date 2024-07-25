@@ -15,6 +15,12 @@
     display: none;
 }
 
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 .nav_container {
     width: 100%;
 }
@@ -47,6 +53,7 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
+    font-weight: 200;
 }
 
 .curr_nav_item {
@@ -54,6 +61,8 @@
     flex-direction: column;
     align-items: center;
     margin-top: -7px;
+    font-family: "Poppins";
+    font-weight: 200;
 }
 
 .curr_nav_link {
@@ -83,6 +92,21 @@
     color: black;
     font-size: 18px;
     cursor: pointer;
+}
+
+.special_menu_item{
+    background-color: #C7DDE2;
+    color: var(--teal);
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 2px solid var(--teal);
+    transition: 0.5s;
+}
+
+.special_menu_item:hover{
+    background-color: var(--teal);
+    color: white !important;
 }
 
 .curr_nav_item:hover {

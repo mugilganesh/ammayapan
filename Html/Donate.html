@@ -5,40 +5,39 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/css/donate.css" />
-    <title>Ammaiyapan Charitable Trust</title>
+    <link rel="stylesheet" href="../css/donate.css" />
+    <title>Donate to Ammaiyapan Charitable Trust</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="/js/donate.js"></script>
+    <script type="module" src="../js/donate.js"></script>
 </head>
 
 <body>
     <div class="nav_container">
         <nav class="navbar">
-            <img class="navbar_logo" src="/resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
+            <img class="navbar_logo" src="../resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
             <div class="menu_toggle">
 
             </div>
             <ul class="nav_menu">
-                <li class="curr_nav_item">
-                    <a href="#" class="curr_nav_link">Home</a>
+                <li class="nav_item">
+                    <a href="../index.html" class="nav_link">Home</a>
+                </li>
+                <li class="nav_item">
+                    <a href="about_us.html" class="nav_link">About Us</a>
                     <span class="curr_item_underline"></span>
                 </li>
                 <li class="nav_item">
-                    <a href="/Html/about_us.html" class="nav_link">About Us</a>
-                    <span class="curr_item_underline"></span>
+                    <a href="services.html" class="nav_link">Services</a>
                 </li>
                 <li class="nav_item">
-                    <a href="#" class="nav_link">Services</a>
-                </li>
-                <li class="nav_item">
-                    <a href="/Html/events.html" class="nav_link">Events</a>
-                </li>
-                <li class="nav_item">
-                    <a href="/Html/Donate.html" class="nav_link">Donate</a>
+                    <a href="events.html" class="nav_link">Events</a>
                 </li>
                 <li class="nav_item">
                     <a href="#" class="nav_link">Gallery</a>
-                </li>
+                  </li>
+                  <li class="nav_item">
+                    <a href="#" class="nav_link curr_special_menu_item">Donate</a>
+                  </li>
             </ul>
         </nav>
     </div>
@@ -52,27 +51,48 @@
                     its own.</p>
             </div>
         </div>
-        <div class="donation_details">
+        <div class="donation_details" id="parent_container">
             <div class="donate_details_1">
                 <h2>Dedicate Your Donation</h2>
                 <div class="donate_details_1_inputs">
-                    <button>An Occasion</button>
-                    <button>In Memory of</button>
+                    <button class="dedicate_btn" onclick="on_dedicate_selected()">An Occasion</button>
+                    <button class="dedicate_btn" onclick="on_dedicate_selected()">In Memory of</button>
                 </div>
             </div>
-            <div class="donate_details_2">
+            <div class="donate_details_2 hide_content" id="effort_container">
                 <h2>Fuel Our Efforts</h2>
                 <div class="donate_details_2_inputs">
-                    <button>Livelihood</button>
-                    <button>Education</button>
-                    <button>Infrastructure</button>
-                    <button>Services</button>
-                    <button>Recreation</button>
+                    <button onclick="on_effort_selected('Livelihood')">Livelihood</button>
+                    <button onclick="on_effort_selected('Food')">Food</button>
+                    <button onclick="on_effort_selected('Infrastructure')">Infrastructure</button>
+                    <button onclick="on_effort_selected('Services')">Services</button>
+                    <button onclick="on_effort_selected('Recreation')">Recreation</button>
                 </div>
             </div>
-            <div class="donate_details_3">
+            <div class="donate_details_3 hide_content" id="impact_container">
                 <h2>Choose Your Impact</h2>
-                <div class="donate_details_3_inputs">
+                <div class="donate_details_3_inputs" id="impacts">
+                    <div class="impact_container">
+                        <div class="impact_radio_btn">
+                            <div class="radio_circle"></div>
+                        </div>
+                        <div class="impact_details">
+                            <h3>INR</h3>
+                            <h3>6000</h3>
+                            <p>Sponsor Assistive Aids</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="custom_amount">
+                    <div class="custom_currency">
+                        <p>INR</p>
+                    </div>
+                    <div class="custom_price">
+                        <input type="numer" placeholder="Custom Impact">
+                    </div>
+                </div>
+                <div class="donate_submit">
+                    <button>Donate</button>
                 </div>
             </div>
         </div>
@@ -161,7 +181,7 @@
         <footer>
             <div class="row">
                 <div class="col col_logo">
-                    <img src="/resources/logo/Ammayappan_Logo_Svg_Light.svg" alt="Ammayapan Logo" class="logo">
+                    <img src="../resources/logo/Ammayappan_Logo_Svg_Light.svg" alt="Ammayapan Logo" class="logo">
                     <p class="logo_name">AMMAYAPAN</p>
                 </div>
                 <div class="col col_contact">
@@ -186,7 +206,7 @@
                     <p class="newsletter_content">Ammayapan is dedicated to enriching the lives of our</p>
                     <form class="newsletter_form" action="">
                         <input type="email" placeholder="Email id" required>
-                        <button type="submit"><img class="send_icon" src="/resources/icons/Send_icon.svg"
+                        <button type="submit"><img class="send_icon" src="../resources/icons/Send_icon.svg"
                                 alt="Send Icon"></button>
                     </form>
                 </div>
@@ -196,10 +216,10 @@
                 <div class="extra">
                     <p class="copyright">Copyright ©2024 All rights reserved </p>
                     <div class="social_icons">
-                        <img class="icon" src="/resources/icons/Fackbook Icon.svg" alt="Fackbook Icon">
-                        <img class="icon" src="/resources/icons/LinkedIn Icon.svg" alt="Fackbook Icon">
-                        <img class="icon" src="/resources/icons/YouTube Icon.svg" alt="Fackbook Icon">
-                        <img class="icon" src="/resources/icons/Instagram Icon.svg" alt="Fackbook Icon">
+                        <img class="icon" src="../resources/icons/Fackbook Icon.svg" alt="Fackbook Icon">
+                        <img class="icon" src="../resources/icons/LinkedIn Icon.svg" alt="Fackbook Icon">
+                        <img class="icon" src="../resources/icons/YouTube Icon.svg" alt="Fackbook Icon">
+                        <img class="icon" src="../resources/icons/Instagram Icon.svg" alt="Fackbook Icon">
                     </div>
                 </div>
             </div>

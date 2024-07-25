@@ -134,6 +134,7 @@
     text-decoration: none;
     color: black;
     font-size: 20px;
+    font-weight: 200;
 }
 
 .curr_nav_item {
@@ -172,6 +173,21 @@
     cursor: pointer;
 }
 
+.special_menu_item {
+    background-color: #C7DDE2;
+    color: var(--teal);
+    padding: 10px 45px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 2px solid var(--teal);
+    transition: 0.5s;
+}
+
+.special_menu_item:hover {
+    background-color: var(--teal);
+    color: white !important;
+}
+
 .curr_nav_item:hover {
     color: var(--turquoise);
     transition: all 0.2s ease-out;
@@ -188,7 +204,7 @@
 }
 
 .hero_section {
-    margin: 10px auto;
+    margin: 20px auto;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -226,22 +242,24 @@
 }
 
 .navigation_manual {
-    position: absolute;
-    width: 95%;
-    margin-top: -40px;
+    position: relative;
     display: flex;
     justify-content: center;
-    max-width: 1720px;
-    background-color: transparent;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: -70px;
 }
 
 .manual_btn {
-    border: 2px solid transparent;
-    background-color: transparent;
+    height: 10px;
+    width: 10px;
+    border: 2px solid var(--teal);
+    background-color: #C7DDE2;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
     transition: 1s;
+    opacity: 0.7;
 }
 
 .manual_btn:not(:last-child) {
@@ -254,6 +272,11 @@
 
 #radio1:checked~.first {
     margin-left: 0;
+}
+
+#radio1:checked~.navigation_manual .manual_btn_1 {
+    background-color: var(--teal) !important;
+    opacity: 1 !important;
 }
 
 #radio2:checked~.first {
@@ -269,13 +292,11 @@
 }
 
 .navigation_automatic {
-    position: absolute;
+    position: relative;
     display: flex;
-    width: 95%;
     justify-content: center;
-    margin-top: 590px;
-    max-width: 1720px;
-    background-color: transparent;
+    max-width: 1000px;
+    margin: auto;
 }
 
 .navigation_automatic div {
@@ -378,11 +399,11 @@
     margin-top: 6rem;
 }
 
-.members_container_background{
+.members_container_background {
     /* background-color: var(--water); */
 }
 
-.members_container{
+.members_container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,55 +414,57 @@
     padding: 20px 0;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
     align-items: center;
 }
 
-.slide_members_container{
+.slide_members_container {
     max-width: 1720px;
     /* background-color: gray; */
     padding: 40px;
     overflow: hidden;
 }
 
-.slide_members_content{
+.slide_members_content {
     overflow: hidden;
     /* background-color: var(--red); */
 }
 
-.card{
+.card {
     position: relative;
-    padding: 10px;  
+    padding: 10px;
     align-content: center;
 }
 
-.card:hover > .flip_container{
+.card:hover>.flip_container {
     cursor: pointer;
     /* margin: 0 -15px 0 0; */
     transform: rotateY(180deg);
 }
 
-.flip_container{
+.flip_container {
     transition: transform 1.5s;
     transform-style: preserve-3d;
 }
 
-.image_content, .card_content{
+.image_content,
+.card_content {
     display: flex;
     flex-direction: column;
 }
 
-.image_content, .description_content{
+.image_content,
+.description_content {
     height: 500px;
     width: 385px;
     backface-visibility: hidden;
 }
 
-.image_content{
+.image_content {
     position: absolute;
 }
 
-.description_content{
+.description_content {
     background-color: var(--teal);
     border-radius: 1rem;
     transform: rotateY(180deg);
@@ -452,34 +475,34 @@
     color: var(--azure);
 }
 
-.card_content{
+.card_content {
     align-items: start;
 }
 
-.card_image{
+.card_image {
     height: 500px;
     width: 385px;
     object-fit: cover;
     border-radius: 1rem;
 }
 
-.name{
-    font-size: 28px;   
+.name {
+    font-size: 28px;
     font-family: "Baskervville";
     font-weight: 100;
-    font-style: normal; 
+    font-style: normal;
     text-align: left;
     margin-top: 10px;
 }
 
-.designation{
+.designation {
     font-size: 16px;
     font-family: "Poppins";
     font-weight: 500;
     margin-top: 10px;
 }
 
-.testimonial_section{
+.testimonial_section {
     position: relative;
     max-width: 1720px;
     margin: 30px auto 0 auto;
@@ -488,31 +511,31 @@
     padding: 50px;
 }
 
-.testimonial_container{
+.testimonial_container {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.testimonial_button{
+.testimonial_button {
     align-items: center;
     color: var(--teal);
-    background-color: transparent;   
+    background-color: transparent;
     border: none;
     transition: 0.5s;
 }
 
-.testimonial_button:hover{
+.testimonial_button:hover {
     cursor: pointer;
     scale: 1.1;
     color: var(--turquoise);
 }
 
-.testimonial_button i{
+.testimonial_button i {
     font-size: 80px;
 }
 
-.testimonials{
+.testimonials {
     width: 90%;
     margin: auto;
     border-radius: 1rem;
@@ -539,7 +562,7 @@
     /* background-color: rgba(128, 128, 128, 0.178); */
 }
 
-.testimonial_slide{
+.testimonial_slide {
     width: 20%;
     display: flex;
     align-items: center;
@@ -549,15 +572,15 @@
     transition: 2s;
 }
 
-.testimonial_content{
+.testimonial_content {
     display: flex;
 }
 
-.testimonial_slide{
+.testimonial_slide {
     max-width: 1720px;
 }
 
-.testimonial_slide p{
+.testimonial_slide p {
     text-align: center;
     padding: 0 180px;
     font-family: "Poppins";
@@ -566,24 +589,24 @@
     text-align: center;
 }
 
-.testimonial_slide .quote_icon{
+.testimonial_slide .quote_icon {
     font-size: 30px;
     color: var(--teal);
 }
 
-.testimonial_slide .details{
+.testimonial_slide .details {
     display: flex;
     align-items: center;
     column-gap: 5px;
 }
 
-.details .testimonial_name{
+.details .testimonial_name {
     font-family: "Poppins";
     font-size: 16px;
     font-weight: 500;
 }
 
-.details .testimonial_designation{
+.details .testimonial_designation {
     font-family: "Poppins";
     font-size: 14px;
     font-weight: 400;
@@ -606,7 +629,7 @@ footer {
     width: 85%;
     margin: auto;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     align-items: flex-start;
     justify-content: space-between;
 }
@@ -679,12 +702,12 @@ footer {
     font-family: "Poppins";
 }
 
-ul li {
+.col ul li {
     list-style: none;
     margin-bottom: 12px;
 }
 
-ul li a {
+.col ul li a {
     text-decoration: none;
     color: var(--azure);
     font-family: "Poppins";
@@ -795,12 +818,12 @@ hr {
     }
 
     .navigation_manual {
-        margin-top: -60px;
-        margin-left: -35px;
+        /* margin-top: -60px; */
+        /* margin-left: -35px; */
     }
 
     .navigation_automatic {
-        margin-top: 860px;
-        margin-left: -35px;
+        /* margin-top: 860px;
+        margin-left: -35px; */
     }
 }
