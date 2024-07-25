@@ -241,6 +241,11 @@ body {
     transition: 1s ease; 
 }
 
+.upcoming_section{
+    max-width: 1720px;
+    margin: auto;
+}
+
 .upcoming_title h1{
     font-family: "Baskervville"; 
     text-align: center;

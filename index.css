@@ -130,6 +130,10 @@
     font-weight: 200;
 }
 
+/* .menu_toggle{
+    display: none;
+} */
+
 .curr_nav_item {
     display: flex;
     flex-direction: column;
@@ -269,8 +273,17 @@
     font-weight: 2000;
     font-style: normal;
     font-size: 1.1rem;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     padding-top: 1.5rem;
+}
+
+.home_para_2{
+    font-family: "Poppins";
+    width: 50%;
+    font-weight: 2000;
+    font-style: normal;
+    font-size: 1.1rem;
+    padding-bottom: 1rem;
 }
 
 .home_cont_right {
@@ -752,5 +765,112 @@ hr {
 
     .design_circle_large {
         margin: 0 0 0 1590px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .navbar {
+        display: grid;
+        /* grid-template-columns: 0.1fr auto 1fr; */
+        justify-content: space-between;
+        padding: 0 30px;
+        align-items: center;
+        height: 60px;
+        /* width: 100%; */
+        max-width: 1720px;
+        margin: 0;
+        background-color: var(--teal);
+        width: 100%;
+    }
+    
+    .navbar_logo {
+        height: 25px;
+        width: 55px;
+        transform: scale(1);
+        justify-self: start;
+        cursor: pointer;
+        content: url(resources/logo/Ammayappan_Logo_Svg_Light.svg);
+    }
+
+    .menu_toggle{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav_menu {
+        display: none;
+    }
+    
+    .home_cont_left {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 45px 25px 40px 0px;
+        padding: 25px;
+        row-gap: 30px;
+        /* align-items: center; */
+    }
+    
+    .home_heading {
+        font-family: "Baskervville";
+        font-weight: 500;
+        font-style: italic;
+        font-size: 24px;
+    }
+    
+    .home_bolt_para {
+        font-family: "Baskervville";
+        font-weight: 500;
+        font-size: 60px;
+        padding-bottom: 1rem;
+    }
+
+    .home_para {
+        width: 55%;
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .home_para_2{
+        width: 55%;
+        text-align: right;
+        align-self: end;
+        margin-top: -60px;
+        font-size: 16px;
+    }
+
+    .circle_img_1 {
+        width: 550px;
+        height: 550px;
+        margin: -190px 0px -40px 90px;
+        animation: circle_image_1 alternate infinite 2s ease-in-out 0s;
+        box-shadow: 4px 4px 10px #00000077;
+        z-index: -1;
+        opacity: 0.3;
+        box-shadow: -6px 0px 10px #00000077;
+        content: url(resources/images/Old_Man.jpg);
+    }
+
+    .circle_img_2 {
+        display: none;
+    }
+
+    .circle_img_3 {
+        width: 450px;
+        height: 450px;
+        margin: 525px 0 0 -200px;
+        animation: circle_image_3 alternate infinite 3s ease-in-out 0s;
+        box-shadow: 6px 0px 10px #00000077;
+        z-index: -1;
+        opacity: 0.4;
+        content: url(resources/images/Old_Women.jpg);
+    }
+
+    .design_circle_large, .design_circle_filled, .design_circle_small{
+        display: none;
+    }
+
+    .progress_container{
+        margin-left: -300px;
     }
 }
