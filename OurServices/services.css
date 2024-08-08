@@ -229,14 +229,12 @@
     width: 100%;
     padding: 100px;
     background-color: var(--water);
-    max-width: 1720px;
-    margin: auto;
 }
 
 .gallery h1 {
     text-align: center;
     color: var(--teal);
-    font-family: "Baskervville";
+    font-family: "Baskerville";
     font-size: 2.5rem;
     font-weight: 100;
     background-color: var(--water);
@@ -246,7 +244,7 @@
     align-items: center;
     display: flex;
     height: 600px;
-    max-width: 1000px;
+    max-width: 1720px;
     position: relative;
     background-color: var(--water);
     margin-top: 3rem;
@@ -266,7 +264,7 @@
 
 .gallery_item-1 {
     left: 5%;
-    /*   */
+    /* opacity: 0.4; */
     transform: translateX(-50%) scale(0.5);
     height: 200px;
 }
@@ -364,17 +362,6 @@
     
 }
 
-.gallery_content{
-    width: 100%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.gallery_control_btn{
-    height: 30px;
-    width: 30px;
-}
-
 .gallery_controls button {
     background-color: var(--water);
     border: 0;
@@ -418,21 +405,6 @@
     background: #555;
 }
 
-footer {
-    width: 100%;
-    background-color: var(--teal);
-    padding: 70px 0 35px 0;
-    font-size: 13px;
-    line-height: 20px;
-    font-family: "Poppins";
-    max-width: 1720px;
-    margin: auto;
-    align-items: center;
-    /* margin-top: 85px; */
-}
-
-<<<<<<< HEAD:css/services.css
-
 .gallery_arrow {
     position: absolute;
     top: 50%;
@@ -446,23 +418,31 @@ footer {
 }
 
 .gallery_arrow-left {
-    left: -100px;
+    left: -50px;
+    color: var(--teal);
+    font-size: 8rem;
 }
 
 .gallery_arrow-right {
-    right: -100px;
-}
-
-.gallery_arrow-left{
+    right: -50px;
     color: var(--teal);
     font-size: 8rem;
 }
 
-.gallery_arrow-right{
-    color: var(--teal);
-    font-size: 8rem;
+footer {
+    width: 100%;
+    background-color: var(--teal);
+    padding: 70px 0 35px 0;
+    font-size: 13px;
+    line-height: 20px;
+    font-family: "Poppins";
+    max-width: 1720px;
+    margin: auto;
+    align-items: center;
+    /* margin-top: 85px; */
 }
-=======
+
+
 .row {
     width: 85%;
     margin: auto;
@@ -635,4 +615,3 @@ hr {
     line-height: 40px;
     margin-left: 20px;
 }
->>>>>>> cf371a84ddee3f0ac492b6d41937c7a73d6806df:OurServices/services.css
