@@ -5,18 +5,19 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="index.css" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="/resources/logo/ACTlogo.png">
-  <title>Ammaiyapan Charitable Trust</title>
+  <link rel="icon" type="image/png" href="resources/logo/ACTlogo.png">
+  <title>Ammayappan Charitable Trust: Reaching Out to Those in Need</title>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="/js/index.js"></script>
+  <script src="index.js"></script>
+  <!-- <script type="module" src="js/firebaseauthauth.js"></script> -->
 </head>
 
 <body>
   <div class="splash" id="splash">
     <div class="splash_elements">
-      <img class="splash_logo" src="/resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
+      <img class="splash_logo" src="resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
       <h1 class="splash_title">AMMAYAPAN</h1>
       <div class="splash_line"></div>
       <h1 class="splash_content">Forever Young At Heart</h1>
@@ -25,30 +26,29 @@
   <div class="index_main" id="index_main">
     <div class="nav_container">
       <nav class="navbar">
-        <img class="navbar_logo" src="/resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
+        <img class="navbar_logo" src="resources/logo/Ammayappan_Logo_Svg.svg" alt="Ammayapan Logo">
         <div class="menu_toggle">
-
+          <!-- <p>-</p>
+          <p>-</p>
+          <p>-</p> -->
         </div>
         <ul class="nav_menu">
           <li class="curr_nav_item">
-            <a href="#" class="curr_nav_link">Home</a>
+            <a href="" class="curr_nav_link">Home</a>
             <span class="curr_item_underline"></span>
           </li>
           <li class="nav_item">
-            <a href="/Html/about_us.html" class="nav_link">About Us</a>
+            <a href="AboutAmmayapan" class="nav_link">About Us</a>
             <span class="curr_item_underline"></span>
           </li>
           <li class="nav_item">
-            <a href="#" class="nav_link">Services</a>
+            <a href="OurServices" class="nav_link">Services</a>
           </li>
           <li class="nav_item">
-            <a href="/Html/events.html" class="nav_link">Events</a>
+            <a href="Events" class="nav_link">Events</a>
           </li>
           <li class="nav_item">
-            <a href="/Html/Donate.html" class="nav_link">Donate</a>
-          </li>
-          <li class="nav_item">
-            <a href="#" class="nav_link">Gallery</a>
+            <a href="DonateUs" class="nav_link special_menu_item">Donate</a>
           </li>
         </ul>
       </nav>
@@ -56,28 +56,29 @@
 
     <div class="home_container">
       <div class="home_cont_right">
-        <img class="circle_img circle_img_1" src="/resources/images/Stock Images/Old_People.jpg" alt="Old People">
-        <img class="circle_img circle_img_2" src="/resources/images/Stock Images/Donate_1.jpg" alt="Old People">
-        <img class="circle_img circle_img_3" src="/resources/images/Stock Images/Donate_2.jpg" alt="Old People">
+        <img class="circle_img circle_img_1" src="resources/images/Stock Images/Old_People.jpg" alt="Old People">
+        <img class="circle_img circle_img_2" src="resources/images/Stock Images/Donate_1.jpg" alt="Old People">
+        <img class="circle_img circle_img_3" src="resources/images/Stock Images/Donate_2.jpg" alt="Old People">
       </div>
       <div class="home_cont_left">
         <h3 class="home_heading">Together we can</h3>
         <h1 class="home_bolt_para">Make a <br>Difference</h1>
-        <a href="#" class="services_btn">Services</a>
+        <a href="DonateUs" class="services_btn">Donate</a>
         <p class="home_para">In our tradition, we prioritize serving spiritual seekers and monks, considering it a
-          meaningful path of its own. An exceptional embodiment of this commitment is seen through Annadanam, the
+          meaningful path of its own.</p>
+        <p class="home_para_2">An exceptional embodiment of this commitment is seen through Annadanam, the
           reverential act of offering food.</p>
       </div>
       <div class="circle_img design_circle_small"></div>
       <div class="circle_img design_circle_large"></div>
       <div class="circle_img design_circle_filled"></div>
       <div class="home_body_cont">
-        <h1 class="home_body_para_left">forever <br>young <br>at heart</h1>
+        <h1 class="home_body_para_left"><span>forever </span><br>young <br>at heart</h1>
         <div class="home_body_para_right_cont">
           <p class="home_body_para_right">Ammayappan is dedicated to enriching the lives of our residents by offering
             compassionate care, meaningful activities, and a community that feels like family. We strive to meet the
             physical, emotional, and social needs of each individual, ensuring their well-being and happiness.</p>
-          <p class="home_body_founder">-Balamurugan, Co-Founder</p>
+          <p class="home_body_founder">Balamurugan, Co-Founder</p>
         </div>
       </div>
 
@@ -85,7 +86,7 @@
         <div class="progress_container">
           <div class="progress_box" style="--num:50;">
             <div class="core_icon_container">
-              <img class="core_icon" src="/resources/icons/Integrity.svg" alt="">
+              <img class="core_icon" src="resources/icons/Integrity.svg" alt="">
             </div>
             <div class="dot" id="dot"></div>
             <svg class="progress_bar" id="progress_bar">
@@ -107,9 +108,9 @@
               <p class="home_cont_right_para">Prioritizing the needs and well-being of beneficiaries, treating all
                 individuals with kindness, and being sensitive to their circumstances and challenges.</p>
             </li>
-            <li class="core_value" id="inclusivity">
-              <h1 class="home_footer_cont_right_heading">Inclusivity and Equity</h1>
-              <p class="home_cont_right_para">Developing programs that are accessible to diverse groups, promoting
+            <li class="core_value core_value_even" id="inclusivity">
+              <h1 class="home_footer_cont_right_heading core_value_content_even">Inclusivity and Equity</h1>
+              <p class="home_cont_right_para core_value_content_even">Developing programs that are accessible to diverse groups, promoting
                 non-discriminatory practices, and striving to eliminate barriers to participation.</p>
             </li>
             <li class="core_value" id="respect">
@@ -117,9 +118,9 @@
               <p class="home_cont_right_para">Treating everyone with respect, safeguarding the dignity of all
                 beneficiaries and stakeholders, and fostering a culture of mutual respect within the organization.</p>
             </li>
-            <li class="core_value" id="intergrity">
-              <h1 class="home_footer_cont_right_heading">Integrity and Transparency</h1>
-              <p class="home_cont_right_para">Clear communication of goals, activities, and financial matters to
+            <li class="core_value core_value_even" id="intergrity">
+              <h1 class="home_footer_cont_right_heading core_value_content_even">Integrity and Transparency</h1>
+              <p class="home_cont_right_para core_value_content_even">Clear communication of goals, activities, and financial matters to
                 stakeholders and the public, ensuring that all actions are ethical and accountable.</p>
             </li>
           </ul>
@@ -134,7 +135,7 @@
     <footer>
       <div class="row">
         <div class="col col_logo">
-          <img src="/resources/logo/Ammayappan_Logo_Svg_Light.svg" alt="Ammayapan Logo" class="logo">
+          <img src="resources/logo/Ammayappan_Logo_Svg_Light.svg" alt="Ammayapan Logo" class="logo">
           <p class="logo_name">AMMAYAPAN</p>
         </div>
         <div class="col col_contact">
@@ -148,9 +149,9 @@
         <div class="col col_links">
           <h3>Links</h3>
           <ul>
-            <li><a href="">About Us</a></li>
-            <li><a href="">Events</a></li>
-            <li><a href="">Donate Us</a></li>
+            <li><a href="AboutAmmayapan">About Us</a></li>
+            <li><a href="Events">Events</a></li>
+            <li><a href="DonateUs">Donate Us</a></li>
           </ul>
         </div>
         <div class="col col_newsletter">
@@ -158,7 +159,7 @@
           <p class="newsletter_content">Ammayapan is dedicated to enriching the lives of our</p>
           <form class="newsletter_form" action="">
             <input type="email" placeholder="Email id" required>
-            <button type="submit"><img class="send_icon" src="/resources/icons/Send_icon.svg" alt="Send Icon"></button>
+            <button type="submit"><img class="send_icon" src="resources/icons/Send_icon.svg" alt="Send Icon"></button>
           </form>
         </div>
       </div>
@@ -167,10 +168,10 @@
         <div class="extra">
           <p class="copyright">Copyright ©2024 All rights reserved </p>
           <div class="social_icons">
-            <img class="icon" src="/resources/icons/Fackbook Icon.svg" alt="Fackbook Icon">
-            <img class="icon" src="/resources/icons/LinkedIn Icon.svg" alt="Fackbook Icon">
-            <img class="icon" src="/resources/icons/YouTube Icon.svg" alt="Fackbook Icon">
-            <img class="icon" src="/resources/icons/Instagram Icon.svg" alt="Fackbook Icon">
+            <img class="icon" src="resources/icons/Fackbook Icon.svg" alt="Fackbook Icon">
+            <img class="icon" src="resources/icons/LinkedIn Icon.svg" alt="Fackbook Icon">
+            <img class="icon" src="resources/icons/YouTube Icon.svg" alt="Fackbook Icon">
+            <img class="icon" src="resources/icons/Instagram Icon.svg" alt="Fackbook Icon">
           </div>
         </div>
       </div>
