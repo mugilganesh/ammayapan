@@ -206,6 +206,7 @@
     padding: 2rem; 
 }
 
+
 .gallery {
     width: 100%;
     padding: 100px;
@@ -244,8 +245,8 @@
 }
 
 .gallery_item-1 {
-    left: 1%;
-    opacity: 0.4;
+    left: 5%;
+    /*   */
     transform: translateX(-50%) scale(0.5);
     height: 200px;
 }
@@ -259,7 +260,7 @@
 }
 
 .gallery_item-2 {
-    left: 13%;
+    left: 15%;
     transform: translateX(-50%) scale(0.8);
 }
 
@@ -274,13 +275,63 @@
 }
 
 .gallery_item-4 {
-    left: 90%;
+    left: 85%;
     transform: translateX(-50%) scale(0.8);
 }  
 
 .gallery_item-5 {
-    left: 100%;
-    opacity: 0.4;
+    left: 95%;
+    /* opacity: 0.4; */
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-6 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-7 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-8 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-9 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-10 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-11 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-12 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-13 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-14 {
+    transform: translateX(-50%) scale(0.5);
+    height: 200px;
+}
+
+.gallery_item-15 {
     transform: translateX(-50%) scale(0.5);
     height: 200px;
 }
@@ -306,7 +357,7 @@
     outline: none;
 }
 
-.gallery_controls:hover .gallery_controls-previous::before {
+.gallery_controls:hover .gallery_controls-pre::before {
     left: -40px;
 }
 
@@ -337,3 +388,33 @@
 }
 
 
+
+.gallery_arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    color: black;
+    font-size: 5rem; /* Adjust font size for larger arrows */
+    padding: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.gallery_arrow-left {
+    left: -100px;
+}
+
+.gallery_arrow-right {
+    right: -100px;
+}
+
+.gallery_arrow-left{
+    color: var(--teal);
+    font-size: 8rem;
+}
+
+.gallery_arrow-right{
+    color: var(--teal);
+    font-size: 8rem;
+}
